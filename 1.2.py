@@ -4,7 +4,8 @@ b = int(input())
 c = int(input())
 f = int(input())
 d = int(input())
-if f - d == 0:
+x = f - d
+if x == 0:
     print("Делить на ноль нельзя!")
 else:
-    print((a * b - c) / (f - d))
+    print((a * b - c) / x)
