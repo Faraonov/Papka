@@ -1,5 +1,5 @@
-x = int(input("Ввести два числа"))
-y = int(input())
+x = int(input("Ввести x"))
+y = int(input("Ввести y"))
 if x > 0 and y > 0:
     print("Первая четверть")
 elif x < 0 and y > 0:
