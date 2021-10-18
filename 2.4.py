@@ -1,4 +1,4 @@
-x = list(input())
+x = input()
 x1 = 0
 x2 = 0
 for i in x:
@@ -11,4 +11,4 @@ if x1 > x2:
 elif x1 < x2:
     print("Не хватает", x2 - x1, "откр. ск.")
 else:
-    print("Скобок чётное число")
+    print("Откр. и закр. ск. поровну")
