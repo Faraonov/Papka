@@ -4,7 +4,6 @@ j = 0
 for i in x:
       if i.isdigit():
         j += 1
-    if j == k:
-        print(x[i])
-if k > j:
-    print("Недостаточно цифр")
+      if j == k:
+        print(i)
+        break
