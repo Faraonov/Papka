@@ -6,7 +6,6 @@ for i in x:
         x1 +=1
     elif x[i] == ")":
         x2 +=1
-    i += 1
 if x1 > x2:
     print("Не хватает", x1 - x2, "закр. ск.")
 elif x1 < x2:
