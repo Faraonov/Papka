@@ -3,9 +3,9 @@ x1 = 0
 x2 = 0
 for i in x:
     if i == "(":
-        x1 +=1
+        x1 += 1
     elif i == ")":
-        x2 +=1
+        x2 += 1
 if x1 > x2:
     print("Не хватает", x1 - x2, "закр. ск.")
 elif x1 < x2:
