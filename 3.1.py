@@ -4,5 +4,7 @@ def z(x):
     while x != "":
         a.append(x)
         x = input()
-    return a 
+    return a
+
+
 print(z(" "))
