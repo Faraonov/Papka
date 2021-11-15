@@ -1,4 +1,4 @@
-def z (x):
+def z(x):
     x = input("Ввод")
     a = list(x)
     while x != "":
