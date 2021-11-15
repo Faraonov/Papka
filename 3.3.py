@@ -7,5 +7,6 @@ def z(n):
         a = a + b
         print(a)
         a , b = b , a
-if z(int(input("Введите число"))) is not None:
-    print(z(int(input("Введите число"))))
+
+
+x = z(int(input("Введите число")))
