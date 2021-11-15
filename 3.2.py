@@ -7,5 +7,5 @@ def z(n):
         print("лето")
     else:
         print("осень")
-if z(int(input("Введите число от 1 до 12"))) != None:
+if z(int(input("Введите число от 1 до 12"))) is not None:
    print(z(int(input("Введите число от 1 до 12"))))
