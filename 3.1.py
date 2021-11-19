@@ -1,10 +1,10 @@
-def z(x):
+def z ():
+    a = list()
     x = input("Ввод")
-    a = list(x)
     while x != "":
         a.append(x)
         x = input()
-    return a
+    return a 
 
 
-print(z(" "))
+z ()
