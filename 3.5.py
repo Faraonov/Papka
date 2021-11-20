@@ -2,9 +2,5 @@ def crarifm(a):
     return sum(a) / len(a)
 
 
-b = list()
-x = input("Введите числа")
-while x != "":
-    b.append(float(x))
-    x = input("")
+b = [1, 2, 3, 4, 5]
 print(crarifm(b))
