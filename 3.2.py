@@ -7,6 +7,7 @@ def z(n):
         print("лето")
     else:
         print("осень")
+    return 0
 
 
 x = z(int(input("Введите число от 1 до 12")))
