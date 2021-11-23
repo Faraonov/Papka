@@ -3,7 +3,7 @@ def z(n):
     b = 1
     print(a)
     print(b)
-    for i in range(n-2):
+    for i in range(n - 2):
         a = a + b
         print(a)
         a , b = b , a
