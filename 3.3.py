@@ -7,6 +7,7 @@ def z(n):
         a = a + b
         print(a)
         a , b = b , a
+    return 0
 
 
 x = z(int(input("Введите число")))
