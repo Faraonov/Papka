@@ -1,13 +1,12 @@
 def z(n):
     if (n < 3) or (n == 12):
-        print("зима")
+        return("зима")
     elif (n > 2) and (n < 6):
-        print("весна")
+        return("весна")
     elif (n > 5) and (n < 9):
-        print("лето")
+        return("лето")
     else:
-        print("осень")
-    return 0
+        return("осень")
 
 
-x = z(int(input("Введите число от 1 до 12")))
+print(z(int(input("Введите число от 1 до 12"))))
