@@ -24,10 +24,12 @@ def f(a, x):
 
 
 b = z()
-b.sort(key=int)
+b.sort(key = int)
 print(b)
 m = int(input("Введите искомый элемент"))
 print(f(b, m))
+
+
 assert f([5, 6, 7], 5) == 0
 assert f([1, 2, 4, 5, 6, 7, 8], 17) == None
 assert f([], 1) == "Пустой список"
