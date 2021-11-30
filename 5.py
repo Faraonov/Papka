@@ -17,7 +17,7 @@ def f(a, x):
         if l > j:
             return None
         else:
-            for i in range(t+1):
+            for i in range(t + 1):
                 if a[i] == a[t] and i < t:
                     t = i
             return t
