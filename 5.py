@@ -31,6 +31,6 @@ print(f(b, m))
 
 
 assert f([5, 6, 7], 5) == 0
-assert f([1, 2, 4, 5, 6, 7, 8], 17) == None
+assert f([1, 2, 4, 5, 6, 7, 8], 17) is None
 assert f([], 1) == "Пустой список"
 assert f([1, 4, 5, 7, 7, 7, 8], 7) == 3
