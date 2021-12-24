@@ -8,8 +8,8 @@ def f(a, x):
         t = len(a) // 2
         j = len(a) - 1
         l = 0
-        while int(a[t]) != x and l <= j:
-            if x > int(a[t]):
+        while a[t] != x and l <= j:
+            if x > a[t]:
                 l = t + 1
             else:
                 j = t - 1
@@ -17,7 +17,7 @@ def f(a, x):
         if l > j:
             return None
         else:
-            for i in range(t+1):
+            for i in range(t + 1):
                 if a[i] == a[t] and i < t:
                     t = i
             return t
