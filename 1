@@ -1,0 +1,31 @@
+class Matrix():
+    def __init__(self, st = 0, stl = 0, el = 0):
+        self.st = st
+        self.stl = stl
+        self.el = el
+        self.matrix = []
+
+    def input(self):
+        st = int(input())
+        stl = int(input())
+        for i in range(st):
+            n = []
+            for j in range(stl):
+                k = int(input('Введите число'))
+                n.append(k)
+            self.matrix.append(n)
+
+    def __str__(self):
+        string = ''
+        for i in self.matrix:
+            for j in i:
+                string = string + '%s\t' % (j)
+            string = string + '\n'
+        string = string[:-1]
+        return string
+
+
+a = [[1, 4, 9], [16, 25, 36], [49, 64, 81]]
+m = Matrix(a)
+m.input()
+print(m)
