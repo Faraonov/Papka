@@ -1,0 +1,11 @@
+def poisk():
+    target = int(input("Введите число: "))
+    spisok = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    for i in range(len(spisok)):
+        for j in range(len(spisok)):
+            if spisok[i] + spisok[j] == target and i != j:
+                print(i, " ", j)
+    return target
+
+
+a = poisk()
