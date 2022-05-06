@@ -1,0 +1,85 @@
+from abc import ABC, abstractmethod
+
+
+class Matrix(ABC):
+    def __init__(self, matrix = None):
+        if matrix is None:
+            matrix = [[0]]
+        self.stolb = 1
+        self.strok = 1
+        self.matrix = matrix
+
+    def input(self):
+        self.matrix = []
+        self.strok = int(input("Введите число строк: "))
+        self.stolb = int(input("Введите число столбцов: "))
+        for _ in range(self.strok):
+            tn = []
+            for _ in range(self.stolb):
+                k = int(input("Введите число: "))
+                tn.append(k)
+            self.matrix.append(tn)
+
+    def __str__(self):
+        return "\n".join(["\t".join(map(str, x)) for x in self.matrix])
+
+    def dim(self):
+        return [self.strok, self.stolb]
+
+    def nol(self):
+        nyl = []
+        for _ in range(self.strok):
+            tn = []
+            for _ in range(self.stolb):
+                tn.append(0)
+            nyl.append(tn)
+        return Matrix(nyl)
+
+    def __eq__(self, other):
+        a = 0
+        if Matrix.dim(self) == Matrix.dim(other):
+            for i in range(self.strok):
+                for j in range(self.stolb):
+                    if self.matrix[i][j] != other.matrix[i][j]:
+                        a += 1
+        if a == 0:
+            return self.matrix == other.matrix
+        else:
+            return 0
+
+    def __add__(self, other):
+        if Matrix.dim(self) == Matrix.dim(other):
+            a = self.nol()
+            for i in range(self.strok):
+                for j in range(self.stolb):
+                    a.matrix[i][j] = self.matrix[i][j] + other.matrix[i][j]
+            return a.matrix
+
+    def __sub__(self, other):
+        if Matrix.dim(self) == Matrix.dim(other):
+            a = self.nol()
+            for i in range(self.strok):
+                for j in range(self.stolb):
+                    a.matrix[i][j] = self.matrix[i][j] - other.matrix[i][j]
+            return a.matrix
+
+    def __mul__(self, other):
+        if int(other) == other:
+            a = self.nol()
+            for i in range(self.strok):
+                for j in range(self.stolb):
+                    a.matrix[i][j] = self.matrix[i][j] * other
+            return a.matrix
+        elif self.stolb == Matrix.dim(other)[0]:
+            a = []
+            for _ in range(self.strok):
+                tn = []
+                for _ in range(Matrix.dim(other)[1]):
+                    tn.append(0)
+                a.append(tn)
+            a = Matrix(a)
+            for i in range(self.strok):
+                for k in range(Matrix.dim(other)[1]):
+                    for j in range(self.stolb):
+                        a.matrix[i][k] += self.matrix[i][j] * other.matrix[j][k]
+            return a.matrix
