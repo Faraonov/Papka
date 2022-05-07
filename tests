@@ -1,0 +1,42 @@
+from matrix import Matrix
+
+
+def test_init():
+    f = Matrix()
+    assert f.stolb == 1
+    assert f.strok == 1
+    assert f.matrix == [[0]]
+
+def test_str():
+    f = Matrix([[2, 1], [3, 4]])
+    j = str(f)
+    assert j == '2\t1\n3\t4'
+
+def test_dim():
+    f = Matrix([[1], [2], [3]])
+    assert f.dim == [3, 1]
+
+def test_nol():
+    f = Matrix([[1], [2], [3]])
+    assert f.nol == [[0], [0], [0]]
+
+def test_eq():
+    f = Matrix([[2], [4], [6]])
+    g = Matrix([[2], [4], [6]])
+    assert (f, g).__eq__ == 0
+
+def test_add():
+    f = Matrix([[1], [2], [3]])
+    g = Matrix([[2], [4], [6]])
+    assert (f, g).__add__ == Matrix([[3], [6], [9]])
+
+def test_sub():
+    f = Matrix([[1], [2], [3]])
+    g = Matrix([[2], [4], [6]])
+    assert (f, g).__sub__ == Matrix([[3], [6], [9]])
+
+def test_mul():
+    f = Matrix([1, 2, 3])
+    g = Matrix([[2], [4], [6]])
+    assert (f, 8).__mul__ == Matrix([8, 16, 24])
+    assert (f, g).__mul__ == Matrix([28])
