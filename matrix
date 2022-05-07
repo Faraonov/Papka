@@ -1,8 +1,5 @@
-from abc import ABC, abstractmethod
-
-
-class Matrix(ABC):
-    def __init__(self, matrix = None):
+class Matrix:
+    def __init__(self, matrix=None):
         if matrix is None:
             matrix = [[0]]
         self.stolb = 1
